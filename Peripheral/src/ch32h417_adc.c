@@ -1233,7 +1233,7 @@ void ADC_SMP_ModeConfig(ADC_TypeDef *ADCx, uint8_t ADC_Channel, uint8_t SMP_Mode
     {
         ADCx->AUX |= (1 << ADC_Channel);
     }
-    else if(SMP_Mode == ADC_SMP_CFG_MODE1)
+    else if(SMP_Mode == ADC_SMP_CFG_MODE0)
     {
         ADCx->AUX &= ~(1 << ADC_Channel);
     }

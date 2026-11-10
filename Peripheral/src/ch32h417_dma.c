@@ -48,7 +48,7 @@
  */
 void DMA_DeInit(DMA_Channel_TypeDef *DMAy_Channelx)
 {
-    DMAy_Channelx->CFGR &= (uint16_t)(~DMA_CFGR1_EN);
+    DMAy_Channelx->CFGR &= (uint32_t)(~DMA_CFGR1_EN);
     // DMAy_Channelx->CFGR = 0;
     // DMAy_Channelx->CNTR = 0;
     // DMAy_Channelx->PADDR = 0;
@@ -202,7 +202,7 @@ void DMA_Cmd(DMA_Channel_TypeDef *DMAy_Channelx, FunctionalState NewState)
     }
     else
     {
-        DMAy_Channelx->CFGR &= (uint16_t)(~DMA_CFGR1_EN);
+        DMAy_Channelx->CFGR &= (uint32_t)(~DMA_CFGR1_EN);
     }
 }
 
