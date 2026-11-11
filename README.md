@@ -5,6 +5,7 @@ Vendor CMSIS headers, standard peripheral driver library, and USB device middlew
 ## Directory Structure
 
 - `Cmsis/` — QingKe V5F RISC-V core peripheral access layer and debug support (`Nanjing Qinheng Microelectronics Co., Ltd.`).
+- `Startup/` — QingKe V5F startup vector/bootstrap assembly (`startup_ch32h417_v5f.S`), system clock update routines (`system_ch32h417.c` / `system_ch32h417.h`), and peripheral header aggregation (`ch32h417_conf.h`).
 - `Peripheral/` — CH32H41x Standard Peripheral Driver (`V1.0.0`), including targeted Betaflight integration fixes for 32-bit DMA `CFGR` mask handling, ADC sampling mode configuration, and bounded fast-page Flash programming/erase state recovery.
 - `middlewares/` — CherryUSB (`v1.5.0`) USB device core, CDC-ACM, and MSC class drivers, paired with the CH32H41x USBHS device controller driver (DCD) and VCP board glue.
 
@@ -16,5 +17,5 @@ Keep changes to vendor and middleware files minimal and hardware-scoped; Betafli
 
 ## Licensing
 
-- `Cmsis/` and `Peripheral/`: Copyright (c) 2025 Nanjing Qinheng Microelectronics Co., Ltd. Permitted for use (modified or unmodified) on microcontrollers manufactured by Nanjing Qinheng Microelectronics; preserve all file header notices.
+- `Cmsis/`, `Startup/`, and `Peripheral/`: Copyright (c) 2025 Nanjing Qinheng Microelectronics Co., Ltd. Permitted for use (modified or unmodified) on microcontrollers manufactured by Nanjing Qinheng Microelectronics; preserve all file header notices.
 - `middlewares/`: CherryUSB components are licensed under `Apache-2.0` (`Copyright (c) 2022, sakumisu`), with CH32H41x USBHS register definitions provided by Nanjing Qinheng Microelectronics Co., Ltd.
